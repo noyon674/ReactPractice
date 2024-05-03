@@ -1,0 +1,24 @@
+.formgroup{
+    margin-bottom: 20px;
+}
+
+.center{
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: tan;
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+.lable{
+    font-size: 20px;
+}
+.input{
+    padding: 5px 20px;
+}
+.button{
+    font-size: 20px;
+    padding: 5px 10px;
+}
