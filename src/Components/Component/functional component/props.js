@@ -7,7 +7,7 @@ export default function Card(props) {
   return (
     <div className={style.center}>
         <h2>{title}</h2>
-        <p>{props.Desc}</p>
+        <p>{Desc}</p>
     </div>
   )
 }
