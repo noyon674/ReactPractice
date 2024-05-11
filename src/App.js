@@ -1,9 +1,12 @@
 import React from 'react'
-import PassingProps from './Components/Component/functional component/passingProps'
-export default function App() {
+import FormValidation from './Components/Form-validation/formValidation'
+
+function App() {
   return (
     <div>
-    <PassingProps />
+        <FormValidation />
     </div>
   )
 }
+
+export default App

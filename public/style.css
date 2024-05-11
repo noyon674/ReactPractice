@@ -1,0 +1,9 @@
+.center{
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    background-color:slategrey;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+}
