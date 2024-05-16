@@ -1,0 +1,24 @@
+.container{
+    width: 600px;
+    margin: auto;
+    background-color: teal;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    color: #ddd;
+}
+
+.header{
+    text-align: center;
+    font-size: 40px;
+}
+.main{
+    position: absolute;
+}
+.button{
+    font-size: 25px;
+    padding: 0px 10px;
+    border: none;
+    margin-left: 570px;
+    position: relative;
+    cursor: pointer;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import FormValidation from './Components/Form-validation/formValidation'
+import Faqs from './Components/FAQS/faqs'
 
 function App() {
   return (
     <div>
-        <FormValidation />
+      <Faqs />
     </div>
   )
 }
