@@ -1,14 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-};
-
 .center{
-    width: 400px;
-    height: 200px;
+    background-color: tan;
+    width: 500px;
+    height: 400px;
     margin: auto;
-    background-color:slategrey;
-    border-radius: 10px;
     text-align: center;
-    padding: 20px 0;
+    padding-top: 20px;
 }
