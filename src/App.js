@@ -1,13 +1,11 @@
 import React from 'react';
 
-
-import UseEffect2 from './Components/useEffect/UseEffect3';
-import Password from './Password/Password';
+import Datafatch from './Components/Datafetch/Datafatch';
 
 function App() {
   return (
     <div>
-      <Password/>
+      <Datafatch/>
     </div>
   )
 }
