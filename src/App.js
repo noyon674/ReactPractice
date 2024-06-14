@@ -1,11 +1,13 @@
 import React from 'react';
 
-import Datafatch from './Components/Datafetch/Datafatch';
+import HomePage from './Components/CountryApp/HomePage';
+
+
 
 function App() {
   return (
     <div>
-      <Datafatch/>
+      <HomePage />
     </div>
   )
 }
