@@ -1,12 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-import Component1 from './Components/Hooks/PropDilling/Component1'
-import ContextHome from './Components/ContetApiProject/ContextHome'
+import PracticeAgain from './Components/Hooks/UseReducer/PracticeAgain'
 
 function App() {
   return (
     <div>
-      <ContextHome />
+      <PracticeAgain />
     </div>
   )
 }

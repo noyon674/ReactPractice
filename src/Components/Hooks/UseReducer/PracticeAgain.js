@@ -16,6 +16,10 @@ function PracticeAgain() {
         onSubmit:(value, {resetForm})=>{
             const createBook = {id: uuidv4(), name: value.bookName};
             dispatch({type: 'ADD', payload: createBook});
+            //messaage delete
+            setTimeout(() => {
+                dispatch({type: 'MSGDELETE'})
+            }, 1500);
             resetForm({values:''});
         }
     });
@@ -27,7 +31,7 @@ function PracticeAgain() {
             return{
                 allBook: newBookList,
                 isModalOpen: true,
-                modalText: 'Book is added'
+                modalText: 'Book is added',
             }
         }else if(action.type == 'REMOVE'){
             const filteredBooks = [...state.allBook].filter(book=> book.id !== action.payload)
@@ -35,6 +39,11 @@ function PracticeAgain() {
                 allBook: filteredBooks,
                 isModalOpen: true,
                 modalText: 'Book is removed'
+            }
+        }else if(action.type == 'MSGDELETE'){
+            return{
+                ...state,
+                isModalOpen: false
             }
         }
 
@@ -48,16 +57,24 @@ function PracticeAgain() {
     });
 
     const handleRemove = (id)=>{
-        dispatch({type: 'REMOVE', payload:id})
+        dispatch({type: 'REMOVE', payload:id});
+        //
+        setTimeout(() => {
+            dispatch({type: 'MSGDELETE'})
+        }, 1500);
     }
 
     const Modal = (props)=>{
-        return <p>{props.message}</p>
+        return (
+        <div>
+            <p>{props.message}</p>
+        </div>
+        )
     }
   return (
-    <div>
+    <div className='center'>
         <h2>Book List</h2>
-       <form action='' onSubmit={formik.handleSubmit}>
+       <form action='' onSubmit={formik.handleSubmit} style={{marginBottom:"20px"}}>
         <input
         type='text'
         name='bookName'
@@ -70,7 +87,7 @@ function PracticeAgain() {
        {bookState.isModalOpen && <Modal message = {bookState.modalText}/>}
 
        {
-        bookState.allBook.map(book =><li key={book.id}>{book.name} <button onClick={e=>handleRemove(book.id)}>del</button></li>)
+        bookState.allBook.map(book =><li style={{listStyle:"none"}} key={book.id}>{book.name} <button onClick={e=>handleRemove(book.id)}>del</button></li>)
        }
     </div>
   )

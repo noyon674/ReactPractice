@@ -14,10 +14,10 @@ function HomePage() {
     const fetchData = (geturl)=>{
         try{
             fetch(geturl)
-        .then(res => res.json())
-        .then(data => setCountries(data));
-        setLogging(false);
-        setError(null);
+            .then(res => res.json())
+            .then(data => setCountries(data));
+            setLogging(false);
+            setError(null);
 
         }catch (error){
             setLogging(false);

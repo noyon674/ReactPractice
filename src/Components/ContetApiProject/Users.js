@@ -1,16 +1,15 @@
 import React, {useContext} from 'react';
 
-import User from './User';
 import { UsersContext } from './CreateContext';
+import User from './User';
 
 function Users() {
-    
-    const {users, setUsers} = useContext(UsersContext);
+    const {users} = useContext(UsersContext);
 
   return (
     <div>
         {
-            users.map(user =><User user = {user} key = {user.id}/>)
+            users.map(user => <User key = {user.id} user = {user}/>)
         }
     </div>
   )

@@ -4,7 +4,7 @@ import { UsersContext } from './CreateContext';
 
 function User(props) {
     const {id, name} = props.user;
-  const {users, setUsers} = useContext(UsersContext)
+    const {users, setUsers} = useContext(UsersContext);
 
     const handleDelete = (id)=>{
         const filteredUsers = users.filter(user => user.id !== id);
